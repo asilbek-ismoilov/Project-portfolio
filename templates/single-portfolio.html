@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} {% endblock title %}
+{% block content %}     
+
+        <!--:::::WELCOME ATRA START :::::::-->
+        <div class="welcome-area-wrap" style="background: url('{% static 'img/bg/inner-header-bg.jpg' %}');background-size: cover;background-position: center;" id="home">
+            <!--::::: WELCOME CAROUSEL START :::::::-->
+                <div class="welcome-area inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="inner-wlc">
+                                    <h2>Portfolio</h2>
+                                    <h3><a href="{% url 'home-page' %}">home</a>&nbsp;/&nbsp;Portfolio</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 text-center">
+                                <div class="inner-filltext">
+                                    <h1>Portfolio</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!--::::: WELCOME CAROUSEL END:::::::-->
+        </div>
+        <!--:::::WELCOME AREA END :::::::-->
+
+
+        <!--:::::PORTDOLIO AREA START :::::::-->
+        <div class="portfolio-area inner-bg-shpes section-padding">
+            <div class="container">
+                <div class="row portfolio-list2">
+                    <div class="col-md-8 align-self-center">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="portfolio-wrap">
+                                     <div class="single-portfolio-item single-portfolio-item2 portfolio-bg-7"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 align-self-center">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="portfolio-wrap">
+                                     <div class="single-portfolio-item single-portfolio-ite small portfolio-bg-8"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="portfolio-wrap">
+                                     <div class="single-portfolio-item single-portfolio-ite small portfolio-bg-9"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-60"></div>
+                <!-- portfolio single -->
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="single-portfolio-description">
+                            <h3>Project Brief :</h3>
+                            <div class="space-30"></div>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics a large language ocean. A small river named Duden <br><br>flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 offset-lg-1">
+                        <div class="single-portfolio-description">
+                            <h3>Project Info:</h3>
+                            <div class="space-30"></div>
+                            <div class="ctable">
+                                <table class="table table-borderless">
+                                  <tbody>
+                                    <tr>
+                                      <th scope="row">Category</th>
+                                      <td>: Web Development</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">Date</th>
+                                      <td>: 02 October, 2019</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">Client </th>
+                                      <td>: Oniblue</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">Web</th>
+                                      <td>: www.applanding.com</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> 
+
+            </div>
+             <img src="{% static 'img/bg/service-bg.svg' %}" alt="" class="inner-shape1">
+            <img src="{% static 'img/bg/inner-bg1.svg' %}" alt="" class="inner-shape2">
+        </div>
+        <!--:::::PORTDOLIO AREA END :::::::-->
+
+        {% endblock content %}

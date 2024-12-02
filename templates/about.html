@@ -1,0 +1,196 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} About {% endblock title %}
+{% block current %} <li class="current"> {% endblock current %}
+    {% block content %}
+    <!-- url(static/img/bg/inner-header-bg.jpg); -->
+    <!--:::::WELCOME ATRA START :::::::-->
+    <div class="welcome-area-wrap"
+        style="background: url('{% static 'img/bg/inner-header-bg.jpg' %}');background-size: cover;background-position: center;"
+        id="home">
+        <!--::::: WELCOME CAROUSEL START :::::::-->
+        <div class="welcome-area inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="inner-wlc">
+                            <h2>About Me</h2>
+                            <h3><a href="{% url 'home-page' %}">home</a>&nbsp;/&nbsp;About</h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <div class="inner-filltext">
+                            <h1>About</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--::::: WELCOME CAROUSEL END:::::::-->
+    </div>
+    <!--:::::WELCOME AREA END :::::::-->
+
+
+    <!--:::::ABOUT AREA START :::::::-->
+    <div class="about-area about-area-primery section-padding" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 align-self-center">
+                    <div class="about-shape">
+                        <div class="about-img-section text-center"
+                            style="background-image: url(static/img/about/about1.png);background-size: cover;background-position: center">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 offset-lg-1 align-self-center">
+                    <div class="primery-heading">
+                        <strong class="filltext">About Me</strong>
+                        <h2>Xatolar -
+                            o'rganish uchun imkoniyat <span>Yuksalishga qadamdir</span></h2>
+                        <div class="space-20"></div>
+                        <p>Kod yozish – bu muammo yechish san'ati. Har bir muammo sizning bilimlaringizni yanada
+                            charxlaydi va cheksiz imkoniyatlar yaratadi. Hozirgi mehnatingiz ertaga buyuk loyihalarga
+                            asos bo'ladi</p>
+                        <div class="space-40"></div>
+                        <a href="#" class="cbtn cbnt1 fadeInDown animated">Rezyumeni yuklab olish<i
+                                class="fas fa-download"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--:::::ABOUT AREA END :::::::-->
+
+    <!--:::::SERVICE AREA START :::::::-->
+    <div class="service-area service-primery padding-top" id="service">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="single-service pricing2">
+                        <div class="service-icon">
+                            <img src="{% static 'img/icon/service1.svg' %}" alt="">
+                        </div>
+                        <div class="service-text">
+                            <h4>design principales</h4>
+                            <p>Need a project completed by an expert? Let’s go! Access a Human Resources Consultant to
+                                answer questions</p>
+                        </div>
+                        <div class="circles-wrap">
+                            <div class="circles">
+                                <span class="circle circle-1"></span>
+                                <span class="circle circle-2"></span>
+                                <span class="circle circle-3"></span>
+                                <span class="circle circle-4"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-service active pricing2">
+                        <div class="service-icon">
+                            <img src="{% static 'img/icon/service2.svg' %}" alt="">
+                        </div>
+                        <div class="service-text">
+                            <h4>design principales</h4>
+                            <p>Need a project completed by an expert? Let’s go! Access a Human Resources Consultant to
+                                answer questions</p>
+                        </div>
+
+                        <div class="circles-wrap">
+                            <div class="circles">
+                                <span class="circle circle-1"></span>
+                                <span class="circle circle-2"></span>
+                                <span class="circle circle-3"></span>
+                                <span class="circle circle-4"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-service pricing2">
+                        <div class="service-icon">
+                            <img src="{% static 'img/icon/service1.svg' %}" alt="">
+                        </div>
+                        <div class="service-text">
+                            <h4>design principales</h4>
+                            <p>Need a project completed by an expert? Let’s go! Access a Human Resources Consultant to
+                                answer questions</p>
+                        </div>
+
+                        <div class="circles-wrap">
+                            <div class="circles">
+                                <span class="circle circle-1"></span>
+                                <span class="circle circle-2"></span>
+                                <span class="circle circle-3"></span>
+                                <span class="circle circle-4"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--:::::SERVICE AREA END :::::::-->
+
+    <!--:::::PROJECT AREA START :::::::-->
+    <div class="project-area project-area2 project-area-primery section-padding" id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 align-self-center">
+                    <div class="primery-heading">
+                        <strong class="filltext">our projects</strong>
+                        <small>WORKING PROCESS</small>
+                        <h2>lastet working <span>project</span></h2>
+                    </div>
+                </div>
+                <div class="col-lg-5 align-self-center">
+                    <div class="primery-info-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ratione reprehenderit </p>
+                    </div>
+                </div>
+            </div>
+            <div class="space-60"></div>
+            <div class="row">
+                <ul id="da-thumbs" class="da-thumbs portfolio-carousel2 owl-carousel">
+                    <li>
+                        <a href="#">
+                            <img src="{% static 'img/project/project1.png' %}" alt="">
+                            <div><span>Menu by Simon Jensen</span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{% static 'img/project/project2.png' %}" alt="">
+                            <div><span>Menu by Simon Jensen</span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{% static 'img/project/project3.png' %}" alt="">
+                            <div><span>Menu by Simon Jensen</span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{% static 'img/project/project4.png' %}" alt="">
+                            <div>
+                                <span>Menu by Simon Jensen</span>
+
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{% static 'img/project/project4.png' %}" alt="">
+                            <div>
+                                <span>Menu by Simon Jensen</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--:::::PROJECT AREA END :::::::-->
+    {% endblock content %}

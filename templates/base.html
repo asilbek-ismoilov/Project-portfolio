@@ -1,0 +1,340 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<!--HTML START-->
+
+
+<!-- Mirrored from quomodosoft.com/html/Asilbek Ismoilov/index1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 29 Nov 2024 00:27:36 GMT -->
+
+<head>
+    <!--HEAD START-->
+    <title>{% block title %} {% endblock title %}</title>
+    <!--::::: support meta :::::::-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--:::::icon Calling:::::::-->
+    <link rel="icon" href="#">
+
+    <!--::::: ALL CSS CALLING :::::::-->
+    <link rel="stylesheet" href="{% static 'css/plugins/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/modal-video.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/stellarnav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/typography.css' %}">
+    <link rel="stylesheet" href="{% static 'css/theme.css' %}">
+    <link rel="stylesheet" href="{% static 'css/button.css' %}">
+    <link rel="stylesheet" href="{% static 'css/inner.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <style>
+        .copyright {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            /* Elementlar orasidagi masofa */
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0);
+            /* To'liq shaffoflik */
+            color: white;
+            /* Matn rangi */
+            border-radius: 10px;
+            /* Yuqori burchaklarni yumaloqlash */
+            position: relative;
+            /* Elementlarni joylashtirish uchun nisbiy pozitsiya */
+        }
+
+        .single-social-icon {
+            display: inline-block;
+            transition: transform 0.3s, color 0.3s;
+            /* Hover animatsiyasi */
+            position: relative;
+            top: 5px;
+            /* Ikonkalarni biroz pastga tushirish */
+        }
+
+        .single-social-icon:hover {
+            transform: scale(1.2);
+            /* Hoverda kattalashtirish */
+            color: #ffd700;
+            /* Rangni o'zgartirish */
+        }
+
+        .copyright a {
+            text-decoration: none;
+            /* Havolalar ostidagi chiziqni olib tashlash */
+        }
+
+        .copyright span {
+            margin: 0 10px;
+            /* Matn uchun yon masofa */
+            font-size: 1rem;
+        }
+    </style>
+
+</head>
+<!--HEADE END-->
+
+<body>
+    <!--BODY START-->
+
+    <!--PLACEHOLDER AREA START-->
+    <div class="preloader">
+        <div class="lds-dual-ring"></div>
+    </div>
+    <!--PLACEHOLDER AREA END-->
+
+    <div class="site site-white"> <!--::::: SITE AREA START :::::::-->
+        <!--::::: HEADER AREA START :::::::-->
+        <div class="header-area" id="header">
+            <!--scroll to up btn-->
+            <a href="#home" class="up-btn"><i class="fal fa-angle-up"></i></a>
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-lg-3 align-self-center">
+                        <a href="{% url 'home-page' %}" class="logo"
+                            style="height: 50px; width: 50px; display: flex; align-items: center;">
+                            <img src="{% static 'img/logo/logo1.png' %}" alt="" style="margin-right: 10px;">
+                            <span>Asilbek Ismoilov</span>
+                        </a>
+                    </div>
+                    <div class="col-6 text-center align-self-center">
+                        <div class="main-menu">
+                            <div class="stellarnav">
+                                <ul class="navbarmneuclass">
+                                    <li><a href="{% url 'home-page' %}">Home</a></li>
+                                    <li><a href="{% url 'about-page' %}">About</a></li>
+                                    <li><a href="{% url 'portfolio-page' %}">Portfolio</a></li>
+                                    <li><a href="{% url 'blog-page' %}">Blog</a></li>
+                                    <li><a href="{% url 'contact-page' %}">Contact Us</a></li>
+                                    <!-- <li><a href="#">Pages</a>
+                                            <ul>
+                                                <li><a href="single-portfolio.html">Portfolio Details</a></li>
+                                                <li><a href="single-blog.html">Single Blog</a></li>
+                                            </ul>
+                                        </li>    -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-none d-lg-block col-lg-3 align-self-center text-right">
+                        <!-- <div class="search-area">
+                            <div class="search-box">
+                                <form action="#">
+                                    <input type="search" placeholder="Search">
+                                </form>
+                                <div class="search-btn">
+                                    <a href="#"><i class="fas fa-search"></i></a>
+                                </div>
+                            </div>
+                            <div class="grid-menu" id="grid-side">
+                                <img src="{% static 'img/icon/hamburger.svg" alt="">
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="slide-widgest-wrap" id="slide-widgest">
+                <div class="side-widgest" id="side-content">
+                    <div class="side-close" id="close-btn">
+                        <i class="fal fa-times"></i>
+                    </div>
+                    <div class="logo">
+                        <a href="#" style="height: 50px; width: 50px;"><img src="{% static 'img/logo/logo1.png' %}"
+                                alt=""></a>
+                    </div>
+                    <div class="side-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ratione reprehenderit, error
+                            qui enim sit ex provident iure, dolor, nulla eaque delectus, repudiandae commodi. Velit
+                            assumenda odit quisquam at, error suscipit unde, necessitatibus ipsum ratione excepturi
+                            ducimus labore, totam dolorem.</p>
+                    </div>
+                    <div class="side-social">
+                        <ul>
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--::::: HEADER AREA END :::::::-->
+
+
+        {% block content %}
+
+        {% endblock content %}
+
+
+        <!--:::::CALL TO ACTION AREA START :::::::-->
+        <!-- <div class="cta-area padding-top cta-primery"
+            style="background-image: url('{% static 'img/bg/world-map.svg' %}');background-position: center;background-size: cover;background-repeat: no-repeat;"
+            id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 m-auto text-center">
+                        <div class="primery-heading cta-heading">
+                            <small>Newsletter</small>
+                            <div class="space-20"></div>
+                            <h2>Stay up to date, subscribe to the free <span>newsletter !</span></h2>
+                        </div>
+                        <div class="space-40"></div>
+                        <div class="cta-form">
+                            <form action="#">
+                                <input type="email" placeholder="Enter Your Email..">
+                                <a href="#" class="subscribe-btn">subscribe <i class="fal fa-comments-alt"></i></a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="space-100"></div> -->
+        <!--:::::SOCIAL AREA START :::::::-->
+
+        <!-- <div class="social-area">
+                <div class="container">
+                    <div class="row">
+                        
+                        <div class="col-lg">
+                            <div class="single-social">
+                                <a href="https://www.youtube.com/@program_club" target="_blank">
+                                    <span class="single-social-icon">
+                                        <i class="fab fa-youtube" style="font-size: 2rem; color: red;"></i>
+                                    </span>
+                                    <p class="single-social-text">Join our YouTube channel!</p>
+                                </a>
+                            </div>
+                        </div>      
+                        <div class="col-lg">
+                            <div class="single-social">
+                                <a href="https://www.instagram.com/asilbek__ismoilov/" target="_blank">
+                                    <span class="single-social-icon">
+                                        <i class="fab fa-instagram" style="font-size: 2rem; color: #e4405f;"></i>
+                                    </span>
+                                    <p class="single-social-text">Join our Instagram community!</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg">
+                            <div class="single-social">
+                                <a href="https://t.me/IT_programmer_AI" target="_blank">
+                                    <span class="single-social-icon">
+                                        <i class="fab fa-telegram" style="font-size: 2rem; color: #0088cc;"></i>
+                                    </span>
+                                    <p class="single-social-text">Join our Telegram group!</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg">
+                            <div class="single-social">
+                                <a href="https://github.com/asilbek-ismoilov" target="_blank">
+                                    <span class="single-social-icon">
+                                        <i class="fab fa-github" style="font-size: 2rem; color: black;"></i>
+                                    </span>
+                                    <p class="single-social-text">Explore our GitHub projects!</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+
+        <!--:::::SOCIAL AREA END :::::::-->
+        <!-- <img src="{% static 'img/icon/cta1.png' %}" alt="" class="cta-shape cta-shap1">
+                <img src="{% static 'img/icon/cta2.png' %}" alt="" class="cta-shape cta-shap2">
+                <img src="{% static 'img/icon/cta3.png' %}" alt="" class="cta-shape cta-shap3">
+                <img src="{% static 'img/icon/cta4.png' %}" alt="" class="cta-shape cta-shap4">
+                <img src="{% static 'img/icon/cta5.png' %}" alt="" class="cta-shape cta-shap5">
+            </div> -->
+        <!--:::::CALL TO ACTION AREA END :::::::-->
+
+
+        <!--:::::FOOTER AREA START :::::::-->
+        <div class="footer-area section-padding"
+            style="background-image: url('{% static 'img/bg/footer-bg.png' %}');background-size: cover;background-position: center;background-repeat: no-repeat;">
+            <!--:::::LOGO AREA START :::::::-->
+
+            <!--:::::LOGO AREA END :::::::-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 m-auto text-center">
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="{% url 'home-page' %}">Home</a></li>
+                                <li><a href="{% url 'about-page' %}">About me</a></li>
+                                <li><a href="{% url 'portfolio-page' %}">Portfolio</a></li>
+                                <li><a href="{% url 'blog-page' %}">Blog</a></li>
+                                <li><a href="{% url 'contact-page' %}">Contact me</a></li>
+                            </ul>
+                        </div>
+                        <div class="space-40"></div>
+                        <div class="copyright">
+                            <!-- YouTube -->
+                            <a href="https://www.youtube.com/@program_club" target="_blank">
+                                <span class="single-social-icon">
+                                    <i class="fab fa-youtube" style="font-size: 2rem; color: red;"></i>
+                                </span>
+                            </a>
+                            <!-- GitHub -->
+                            <a href="https://github.com/asilbek-ismoilov" target="_blank">
+                                <span class="single-social-icon">
+                                    <i class="fab fa-github" style="font-size: 2rem; color: rgb(255, 255, 255);"></i>
+                                </span>
+                            </a>
+                            <span>Asilbek Ismoilov</span>
+                            <!-- Telegram -->
+                            <a href="https://t.me/IT_programmer_AI" target="_blank">
+                                <span class="single-social-icon">
+                                    <i class="fab fa-telegram" style="font-size: 2rem; color: #0088cc;"></i>
+                                </span>
+                            </a>
+                            <!-- Instagram -->
+                            <a href="https://www.instagram.com/asilbek__ismoilov/" target="_blank">
+                                <span class="single-social-icon">
+                                    <i class="fab fa-instagram" style="font-size: 2rem; color: #e4405f;"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--:::::FOOTER AREA END :::::::-->
+
+    </div>
+    <!--:::::SITE AREA END :::::::-->
+
+
+
+    <!--:::::ALL JS FILES :::::::-->
+    <script src="{% static 'js/plugins/jQuery.2.1.0.min.js' %}"></script>
+    <script src="{% static 'js/plugins/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.nav.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery-modal-video.min.js' %}"></script>
+    <script src="{% static 'js/plugins/stellarnav.js' %}"></script>
+    <script src="{% static 'js/plugins/popper.min.js' %}"></script>
+    <script src="{% static 'js/plugins/owl.carousel.js' %}"></script>
+    <script src="{% static 'js/plugins/wow.min.js' %}"></script>
+    <script src="{% static 'js/plugins/appear.js' %}"></script>
+    <script src="{% static 'js/plugins/easypiechart.min.js' %}"></script>
+    <script src="{% static 'js/plugins/animatenumber.min.js' %}"></script>
+    <script src="{% static 'js/plugins/bars.js' %}"></script>
+    <script src="{% static 'js/plugins/circle-progress.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.hoverdir.js' %}"></script>
+    <script src="{% static 'js/plugins/isotop.v3.0.4.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+
+</body>
+<!--body end-->
+
+
+<!-- Mirrored from quomodosoft.com/html/Asilbek Ismoilov/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 29 Nov 2024 00:28:16 GMT -->
+
+</html>
+<!--html end-->

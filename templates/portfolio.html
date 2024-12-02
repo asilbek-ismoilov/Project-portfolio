@@ -1,0 +1,165 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Portfolio {% endblock title %}
+{% block content %}     
+
+        <!--:::::WELCOME ATRA START :::::::-->
+        <div class="welcome-area-wrap" style="background: url('{% static 'img/bg/inner-header-bg.jpg' %}');background-size: cover;background-position: center;" id="home">
+            <!--::::: WELCOME CAROUSEL START :::::::-->
+                <div class="welcome-area inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="inner-wlc">
+                                    <h2>Portfolio</h2>
+                                    <h3><a href="{% url 'home-page' %}">home</a>&nbsp;/&nbsp;Portfolio</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 text-center">
+                                <div class="inner-filltext">
+                                    <h1>Portfolio</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!--::::: WELCOME CAROUSEL END:::::::-->
+            
+        </div>
+        <!--:::::WELCOME AREA END :::::::-->
+
+
+        <!--:::::PORTDOLIO AREA START :::::::-->
+        <div class="portfolio-area inner-bg-shpes section-padding">
+            <div class="container">
+               <div class="row">
+                   <div class="col-md-12">
+                       <ul class="portfolio-filter">
+                           <li data-filter="*" class="active">Show All</li>
+                           {% for category in categories %}
+                           <li data-filter=".{{category.name}}">{{category.name}}"</li>
+                           {% endfor %}
+                       </ul>
+                   </div>
+               </div>
+                <div class="row portfolio-list">
+                    <div class="col-md-4 barnding">
+                        <div class="portfolio-wrap">
+                             <div class="single-portfolio-item lage portfolio-bg-1">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-table">
+                                        <div class="portfolio-hover-table-cell">
+                                            <a href="single-portfolio.html"><i class="fa fa-eye"></i></a>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-description">
+                                <h6>29 November 2019</h6>
+                                <h3>Architecture, Digital Art</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 barnding agency design app-design">
+                        <div class="portfolio-wrap">
+                             <div class="single-portfolio-item lage portfolio-bg-2">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-table">
+                                        <div class="portfolio-hover-table-cell">
+                                            <a href="single-portfolio.html"><i class="fa fa-eye"></i></a>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-description">
+                                <h6>29 November 2019</h6>
+                                <h3>Architecture, Digital Art</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 barnding agency">
+                        <div class="portfolio-wrap">
+                             <div class="single-portfolio-item lage portfolio-bg-3">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-table">
+                                        <div class="portfolio-hover-table-cell">
+                                            <a href="single-portfolio.html"><i class="fa fa-eye"></i></a>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-description">
+                                <h6>29 November 2019</h6>
+                                <h3>Architecture, Digital Art</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 barnding app-design">
+                        <div class="portfolio-wrap">
+                             <div class="single-portfolio-item lage portfolio-bg-4">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-table">
+                                        <div class="portfolio-hover-table-cell">
+                                            <a href="single-portfolio.html"><i class="fa fa-eye"></i></a>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-description">
+                                <h6>29 November 2019</h6>
+                                <h3>Architecture, Digital Art</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 barnding design agency">
+                        <div class="portfolio-wrap">
+                             <div class="single-portfolio-item lage portfolio-bg-6">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-table">
+                                        <div class="portfolio-hover-table-cell">
+                                            <a href="single-portfolio.html"><i class="fa fa-eye"></i></a>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-description">
+                                <h6>29 November 2019</h6>
+                                <h3>Architecture, Digital Art</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 agency design app-design">
+                        <div class="portfolio-wrap">
+                             <div class="single-portfolio-item lage portfolio-bg-5">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-table">
+                                        <div class="portfolio-hover-table-cell">
+                                            <a href="single-portfolio.html"><i class="fa fa-eye"></i></a>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-description">
+                                <h6>29 November 2019</h6>
+                                <h3>Architecture, Digital Art</h3>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>  
+                <div class="col-12 text-center">
+                    <a href="#" class="subscribe-btn">Loead More <i class="fas fa-plus-square"></i></a>
+                </div>
+            </div>
+             <img src="{% static 'img/bg/service-bg.svg' %}" alt="" class="inner-shape1">
+            <img src="{% static 'img/bg/inner-bg1.svg' %}" alt="" class="inner-shape2">
+        </div>
+        <!--:::::PORTDOLIO AREA END :::::::-->
+
+        {% endblock content %}

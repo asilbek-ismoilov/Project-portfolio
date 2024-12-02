@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Contact {% endblock title %}
+{% block content %}
+
+<!--:::::WELCOME ATRA START :::::::-->
+<div class="welcome-area-wrap"
+    style="background: url('{% static 'img/bg/inner-header-bg.jpg' %}');background-size: cover;background-position: center;"
+    id="home">
+
+    <!--::::: WELCOME CAROUSEL START :::::::-->
+    <div class="welcome-area inner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="inner-wlc">
+                        <h2>Contact Us</h2>
+                        <h3><a href="{% url 'home-page' %}">home</a>&nbsp;/&nbsp;Contact Us</h3>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="inner-filltext">
+                        <h1>Contact</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--::::: WELCOME CAROUSEL END:::::::-->
+</div>
+<!--:::::WELCOME AREA END :::::::-->
+
+
+<!--:::::CONTACT AREA START :::::::-->
+<div class="contact-page-area inner-bg-shpes section-padding">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-4 text-center">
+                <div class="contact__card">
+                    <div class="contact__card__icon">
+                        <i class="far fa-map-marker-alt"></i>
+                    </div>
+                    <h4>Manzil</h4>
+                    <ul>
+                        <li><a href="#">O'zbekistan, Navoiy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center">
+                <div class="contact__card">
+                    <div class="contact__card__icon">
+                        <i class="far fa-phone"></i>
+                    </div>
+                    <h4>Phone</h4>
+                    <ul>
+                        <li><a href="phoneto:+998978710140">+998978710140</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center">
+                <div class="contact__card">
+                    <div class="contact__card__icon">
+                        <i class="fal fa-envelope"></i>
+                    </div>
+                    <h4>Email</h4>
+                    <ul>
+                        <li><a href="mailto:email@example.com">asilbe.mood@gmail.com</a></li>
+                        <a href="mailto:youremail@gmail.com?subject=Sizga xabar&body=Salom!">Menga xabar yuborish</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="space-100"></div>
+        <div class="row">
+            <div class="col-lg-6 align-self-center">
+                <div class="map mr-lg-4">
+                    <img src="{% static 'img/contact/contact-map.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 align-self-center">
+                <div class="primery-heading">
+                    <strong class="filltext">Contact Us</strong>
+                    <small>EXPLORE THE FEATURES</small>
+                    <h2>Get In one tuch</h2>
+                </div>
+                <div class="space-20"></div>
+                <div class="contact-form">
+                    {% csrf_token %}
+                    <form action="#">
+                        <input type="text" placeholder="Ism">
+                        <input type="email" placeholder="Email">
+                        <textarea name="messege" id="messege" cols="30" rows="3" placeholder="Xabar"
+                            style="resize: none;"></textarea>
+                    </form>
+                    <div class="space-20"></div>
+                    <a href="#" class="subscribe-btn">sent now <i class="fal fa-comments-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="{% static 'img/bg/service-bg.svg" alt="" class="inner-shape1">
+    <img src="{% static 'img/bg/inner-bg1.svg' %}" alt="" class="inner-shape2">
+</div>
+<!--:::::CONTACT AREA END :::::::-->
+{% endblock content %}
