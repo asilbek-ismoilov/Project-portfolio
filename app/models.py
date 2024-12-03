@@ -2,6 +2,17 @@ from django.db import models
 from ckeditor.fields import RichTextField
 from django.utils.text import slugify
 
+from django.db import models
+
+class Contact(models.Model):
+    name = models.CharField(max_length=50)
+    email = models.EmailField(max_length=70)
+    message = models.TextField()
+
+    def __str__(self):
+        return f"{self.name} ({self.email})"
+
+
 class Category(models.Model):
     name = models.CharField(max_length=50)
 
@@ -25,19 +36,24 @@ class Blog(models.Model):
         return self.title
 
 
+class PortfolioCategory(models.Model):
+    name = models.CharField(max_length=50)
 
-# class PortfolioCategory(models.Model):
-#     name = models.CharField(max_length=50)
-#     def __str__(self):
-#         return f"{self.name}"
+    def __str__(self):
+        return self.name
     
-# class Portfolio(models.Model):
-#     image = models.ImageField(upload_to='portfolio/images')
-#     category = models.ForeignKey(PortfolioCategory,on_delete=models.CASCADE)
-#     url = models.URLField(default='https://github.com/asilbek-ismoilov?tab=repositories')
-#     date = models.DateField(auto_now=True)
-#     title = models.CharField(max_length=70)
-#     size = models.CharField(max_length=20, default='col-lg-5')
+class Portfolio(models.Model):
+    title = models.CharField(max_length=255)
+    slug = models.SlugField(unique=True, blank=True)
+    category = models.ForeignKey('PortfolioCategory', on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='Portfolio/images')
+    date = models.DateField()
+    url = models.URLField(blank=True, null=True)
 
-#     def __str__(self):
-#         return f"{self.title} by {self.category}"
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.title

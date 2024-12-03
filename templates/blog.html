@@ -38,7 +38,7 @@
                     {% for blog in blogs %}
                     <div class="single-blog-section">
                         <div class="single-blog-section-img"
-                            style="background-image:url('{{ blog.image.url }}'); height: 400px; background-position: center; background-repeat: no-repeat; background-size: cover;">
+                            style="background-image:url('{{ blog.image.url }}'); height: 800px; background-position: center; background-repeat: no-repeat; background-size: cover;">
                             <span class="single-blog-section-img-tag">{{ blog.category.name }}</span>
                         </div>
                         <div class="single-blog-section-description blog-box">
@@ -62,9 +62,9 @@
                                     <div class="col-sm-6 text-right align-self-center">
                                         <div class="blog-page-social">
                                             <ul>
-                                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="https://github.com/asilbek-ismoilov"><i class="fab fa-github"></i></a></li>
+                                                <li><a href="https://t.me/IT_programmer_AI"><i class="fab fa-telegram"></i></a></li>
+                                                <li><a href="https://www.instagram.com/asilbek__ismoilov/"><i class="fab fa-instagram"></i></a></li>
                                                 <li><a href="http://127.0.0.1:8000/blog/{{ blog.slug }}/"><i class="fal fa-share-alt"></i></a></li>
                                             </ul>
                                         </div>
@@ -77,11 +77,11 @@
                     
 
 
-                    <div class="blog-banner">
+                    <!-- <div class="blog-banner">
                         <h3>The 5 rules of design composition and DOLOR SIT AMET OUR ADIPISCING ELIT.</h3>
-                    </div>
+                    </div> -->
                     <div class="space-50"></div>
-                    <div class="cpagination">
+                    <!-- <div class="cpagination">
                         <nav aria-label="Page navigation example">
                             <ul class="pagination">
                                 <li class="page-item">
@@ -99,7 +99,7 @@
                                 </li>
                             </ul>
                         </nav>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="col-lg-4">
@@ -108,26 +108,24 @@
                         <div class="blog-author-image">
                             <h3>About Me <span>.</span></h3>
                             <div class="border-effect"></div>
-                            <img src="{% static 'img/author/author1.png' %}" alt="">
+                            <!-- <img src="{% static 'img/author/author1.png' %}" alt=""> -->
 
-                            <h6>Creative lead</h6>
+                            <h6>Developer</h6>
                         </div>
                         <div class="blog-author-description">
-                            <img class="signature" src="{% static 'img/author/signature.svg" alt="">
-                            <p>hello I am charis deo -powerful Pointing has no control about the blind texts it is an
-                                almost unorthographic life One day however a small line of blind text by the name</p>
+                            <p>Salom, men Asilbek Ismoilovman — dasturlash va texnologiyalarni rivojlantirishga qiziqaman. Kod yozish nafaqat ish, balki mening o‘zligimni ifodalash vositasi. Maqsadim — bilimlarim bilan boshqalarga yordam berish va texnologiyalar orqali hayotga ijobiy o‘zgarishlar kiritish. 💻</p>
                             <div class="blog-page-social">
                                 <ul>
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fal fa-share-alt"></i></a></li>
+                                    <li><a href="https://www.youtube.com/@program_club"><i class="fab fa-youtube"></i></a></li>
+                                    <li><a href="https://github.com/asilbek-ismoilov"><i class="fab fa-github"></i></a></li>
+                                    <li><a href="https://t.me/IT_programmer_AI"><i class="fab fa-telegram"></i></a></li>
+                                    <li><a href="https://www.instagram.com/asilbek__ismoilov/"><i class="fab fa-instagram"></i></a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="space-30"></div>
-                    <div class="blog-box blog-post">
+                    <!-- <div class="blog-box blog-post">
                         <h3>Recent Posts <span>.</span></h3>
                         <div class="border-effect"></div>
                         <div class="single-blog-post">
@@ -147,20 +145,17 @@
                             <img src="{% static 'img/blog/recent-post4.jpg" alt="">
                             <a href="single-blog.html">A shining crescent far the flying vessel.</a>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="space-30"></div>
-                    <div class="blog-box blog-categores">
+                 <!-- <div class="blog-box blog-categores">
                         <h3>Categories <span>.</span></h3>
                         <div class="border-effect"></div>
                         <ul>
-                            <li><a href="#">Lifestyle (35)</a></li>
-                            <li><a href="#">Travel (15)</a></li>
-                            <li><a href="#">Personal Life (23)</a></li>
-                            <li><a href="#">Medical (13)</a></li>
-                            <li><a href="#">Education (05)</a></li>
-                            <li><a href="#">DESIGN (10)</a></li>
+                            {% for blog in blogs %}
+                            <li><a href="#">{{ blog.category.name }}</a></li>
+                            {% endfor %}
                         </ul>
-                    </div>
+                    </div>    -->
                     <div class="space-30"></div>
                     <!-- <div class="blog-box blog-tag">
                         <h3>tags <span>.</span></h3>
@@ -182,7 +177,7 @@
             </div>
         </div>
     </div>
-    <img src="{% static 'img/bg/service-bg.svg" alt="" class="inner-shape1">
+    <img src="{% static 'img/bg/service-bg.svg' %}" alt="" class="inner-shape1">
     <img src="{% static 'img/bg/inner-bg1.svg' %}" alt="" class="inner-shape2">
     <img src="{% static 'img/bg/inner-bg1.svg' %}" alt="" class="inner-shape3">
 </div>
