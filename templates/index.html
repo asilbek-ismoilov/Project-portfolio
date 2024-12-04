@@ -25,7 +25,6 @@
             </div>
             <div class="wlc-author-1">
                 <!-- <img style="border-radius: 50%; width: 350px;" src="{% static 'img/author/user.jpg' %}" alt=""> -->
-                <!-- <h1 class="wlc-filltext">gilroy</h1> -->
             </div>
         </div>
 
@@ -102,14 +101,14 @@
         <div class="row">
             <div class="col-lg-6 align-self-center">
                 <div class="primery-heading">
-                    <strong class="filltext">our projects</strong>
-                    <small>WORKING PROCESS</small>
-                    <h2>lastet working <span>project</span></h2>
+                    <strong class="filltext">Men proektim</strong>
+                    <small>Ishlaydigan loyihalar</small>
+                    <h2>oxirgi ishlagan <span>proekt</span></h2>
                 </div>
             </div>
             <div class="col-lg-5 align-self-center">
                 <div class="primery-info-content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ratione reprehenderit </p>
+                    <p>Loyihalar turlicha, Backend va Frontend bilan qilingan. Ko'proq jamoa bilan ishlangan </p>
                 </div>
             </div>
         </div>
@@ -119,38 +118,19 @@
                 {% for portfolio in portfolios %}
                 <li>
                     <a href="{% url 'portfolio-page' %}">
-                        <img src="{{ portfolio.image.url }}" alt="">
+                        <img 
+                        style="
+                            width: 100%; 
+                            height: 100%; 
+                            object-fit: contain; 
+                            background-color: white;" 
+                        src="{{ portfolio.image.url }}" 
+                        alt="{{ portfolio.title }}">
+                    <div><span>{{ portfolio.title }}</span></div>
                         <div><span>{{ portfolio.title }}</span></div>
                     </a>
                 </li>
                 {% endfor %}
-                <li>
-                    <a href="{% url 'portfolio-page' %}">
-                        <img src="{% static 'img/project/project1.png' %}" alt="">
-                        <div><span>Menu by Simon Jensen</span></div>
-                    </a>
-                </li>
-                <li>
-                    <a href="{% url 'portfolio-page' %}">
-                        <img src="{% static 'img/project/project2.png' %}" alt="">
-                        <div><span>Menu by Simon Jensen</span></div>
-                    </a>
-                </li>
-                <li>
-                    <a href="{% url 'portfolio-page' %}">
-                        <img src="{% static 'img/project/project3.png' %}" alt="">
-                        <div><span>Menu by Simon Jensen</span></div>
-                    </a>
-                </li>
-                <li>
-                    <a href="{% url 'portfolio-page' %}">
-                        <img src="{% static 'img/project/project4.png' %}" alt="">
-                        <div>
-                            <span>Menu by Simon Jensen</span>
-
-                        </div>
-                    </a>
-                </li>
             </ul>
         </div>
     </div>
@@ -164,68 +144,31 @@
             <div class="col-lg-5 align-self-center">
                 <div class="primery-heading">
                     <strong class="filltext">news & blog</strong>
-                    <small>RECENT NEWS DESK</small> ///
-                    <h2>lastet news & <span>blogs</span></h2>
+                    <small>So'ngi yangiliklar</small> ///
+                    <h2>Yangi xabarlar & <span>blogs</span></h2>
                 </div>
             </div>
             <div class="col-lg-5 align-self-center">
                 <div class="primery-info-content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ratione reprehenderit </p>
+                    <p>Blog da hayotimda bo'lib o'tgan ayrim voqealar, yangiliklar va qiziqarli ma'lumotlar bo'ladi</p>
                 </div>
             </div>
         </div>
         <div class="space-60"></div>
         <div class="row">
             <div class="blogs owl-carousel">
+                {% for blog in blogs %}
                 <div class="single-blog">
                     <div class="single-blog-img">
-                        <img src="{% static 'img/blog/team__1.png' %}" alt="">
+                        <img src="{% static 'img/blog/blog_3.png' %}" alt="">
                     </div>
                     <div class="blog-description">
-                        <p>September 28, 2019</p>
-                        <a href="single-blog.html">Hypnosis 12 Steps To Acquire Mind Power...</a>
-                        <a href="single-blog.html" class="readmore-btn"><i class="fal fa-arrow-right"></i> read more</a>
-                    </div>
-
-                </div>
-                <div class="single-blog">
-                    <div class="single-blog-img">
-                        <div class="single-blog-img">
-                            <img src="{% static 'img/blog/team__2.png' %}" alt="">
-                        </div>
-                    </div>
-                    <div class="blog-description">
-                        <p>September 28, 2019</p>
-                        <a href="single-blog.html">Addiction When Gambling Becomes...</a>
-                        <a href="single-blog.html" class="readmore-btn"><i class="fal fa-arrow-right"></i> read more</a>
-                    </div>
-
-                </div>
-                <div class="single-blog">
-                    <div class="single-blog-img">
-                        <div class="single-blog-img">
-                            <img src="{% static 'img/blog/team__3.png' %}" alt="">
-                        </div>
-                    </div>
-                    <div class="blog-description">
-                        <p>September 28, 2019</p>
-                        <a href="single-blog.html">Harness The Power Of Your Dreams...</a>
-                        <a href="single-blog.html" class="readmore-btn"><i class="fal fa-arrow-right"></i> read more</a>
-                    </div>
-
-                </div>
-                <div class="single-blog">
-                    <div class="single-blog-img">
-                        <div class="single-blog-img">
-                            <img src="{% static 'img/blog/team__4.png' %}" alt="">
-                        </div>
-                    </div>
-                    <div class="blog-description">
-                        <p>September 28, 2019</p>
-                        <a href="single-blog.html">Addiction When Gambling Becomes...</a>
-                        <a href="single-blog.html" class="readmore-btn"><i class="fal fa-arrow-right"></i> read more</a>
+                        <p>{{ blog.created_date }}</p>
+                        <a href="{% url 'blog-detail' blog.slug %}">{{ blog.content|safe | truncatewords:20  }}...</a>
+                        <a href="{% url 'blog-detail' blog.slug %}" class="readmore-btn"><i class="fal fa-arrow-right"></i> Ko'proq o'qish</a>
                     </div>
                 </div>
+                {% endfor %}
             </div>
         </div>
     </div>

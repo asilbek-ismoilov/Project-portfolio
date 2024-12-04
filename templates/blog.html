@@ -37,10 +37,21 @@
                 <div class="blog-page-left mr-lg-4">
                     {% for blog in blogs %}
                     <div class="single-blog-section">
-                        <div class="single-blog-section-img"
+                        <div class="single-blog-section-img">
+                            <img 
+                                style="
+                                    width: 100%; 
+                                    height: auto; 
+                                    object-fit: contain; 
+                                    background-color: white;" 
+                                src="{{ blog.image.url }}" 
+                                alt="{{ blog.title }}">
+                        </div>
+                        
+                        <!-- <div class="single-blog-section-img"
                             style="background-image:url('{{ blog.image.url }}'); height: 800px; background-position: center; background-repeat: no-repeat; background-size: cover;">
                             <span class="single-blog-section-img-tag">{{ blog.category.name }}</span>
-                        </div>
+                        </div> -->
                         <div class="single-blog-section-description blog-box">
                             <h2>
                                 <a href="{% url 'blog-detail' blog.slug %}">{{ blog.title }}</a>
@@ -75,12 +86,9 @@
                     </div>
                     {% endfor %}
                     
-
-
-                    <!-- <div class="blog-banner">
-                        <h3>The 5 rules of design composition and DOLOR SIT AMET OUR ADIPISCING ELIT.</h3>
-                    </div> -->
                     <div class="space-50"></div>
+                    <!-- pagination -->
+                     
                     <!-- <div class="cpagination">
                         <nav aria-label="Page navigation example">
                             <ul class="pagination">
@@ -108,7 +116,7 @@
                         <div class="blog-author-image">
                             <h3>About Me <span>.</span></h3>
                             <div class="border-effect"></div>
-                            <!-- <img src="{% static 'img/author/author1.png' %}" alt=""> -->
+                            <img style="border-radius: 50%; width: 100px;" src="{% static 'img/author/user.jpg' %}" alt="">
 
                             <h6>Developer</h6>
                         </div>
@@ -124,55 +132,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="space-30"></div>
-                    <!-- <div class="blog-box blog-post">
-                        <h3>Recent Posts <span>.</span></h3>
-                        <div class="border-effect"></div>
-                        <div class="single-blog-post">
-                            <img src="{% static 'img/blog/recent-post1.jpg" alt="">
-                            <a href="single-blog.html">Waves flung themselves at the blue evening.</a>
-                        </div>
-                        <div class="single-blog-post">
-                            <img src="{% static 'img/blog/recent-post2.jpg" alt="">
-                            <a href="single-blog.html">The recorded voice scratched in the speaker.</a>
-                        </div>
-                        <div class="single-blog-post">
-                            <img src="{% static 'img/blog/recent-post3.jpg" alt="">
-                            <a href="single-blog.html">The sky was cloudless of a deep dark blue.</a>
-                        </div>
-
-                        <div class="single-blog-post">
-                            <img src="{% static 'img/blog/recent-post4.jpg" alt="">
-                            <a href="single-blog.html">A shining crescent far the flying vessel.</a>
-                        </div>
-                    </div> -->
-                    <div class="space-30"></div>
-                 <!-- <div class="blog-box blog-categores">
-                        <h3>Categories <span>.</span></h3>
-                        <div class="border-effect"></div>
-                        <ul>
-                            {% for blog in blogs %}
-                            <li><a href="#">{{ blog.category.name }}</a></li>
-                            {% endfor %}
-                        </ul>
-                    </div>    -->
-                    <div class="space-30"></div>
-                    <!-- <div class="blog-box blog-tag">
-                        <h3>tags <span>.</span></h3>
-                        <div class="border-effect"></div>
-                        <ul>
-                            <li><a href="#">Travel</a></li>
-                            <li><a href="#">History</a></li>
-                            <li><a href="#">Design</a></li>
-                            <li><a href="#">International</a></li>
-                            <li><a href="#">App</a></li>
-                            <li><a href="#">Melbourne</a></li>
-                            <li><a href="#">Business</a></li>
-                            <li><a href="#">Darwin</a></li>
-                            <li><a href="#">Perth</a></li>
-                            <li><a href="#">Brisbane</a></li>
-                        </ul>
-                    </div> -->
                 </div>
             </div>
         </div>

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, TemplateView
 from .models import Blog, Portfolio, PortfolioCategory
 from django.shortcuts import render
 from django.views.generic.edit import FormView
@@ -35,7 +35,6 @@ class PortfolioDetailView(DetailView):
     template_name = 'single-portfolio.html'
     context_object_name = 'portfolio'
 
-    
 class BlogListView(ListView):
     model = Blog
     template_name = 'blog.html'  
@@ -46,11 +45,28 @@ class BlogDetailView(DetailView):
     template_name = 'single-blog.html'
     context_object_name = 'blog'
 
-def home_view(request):
-    return render(request, "index.html")
+class IndexView(TemplateView):
+    template_name = 'index.html'
 
-def about_view(request):
-    return render(request, "about.html")
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        
+        context['portfolios'] = Portfolio.objects.all().order_by('-id')[:5]
+
+        context['blogs'] = Blog.objects.all().order_by('-created_date')[:5]
+        return context
+
+
+class AboutView(TemplateView):
+    template_name = 'about.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['portfolios'] = Portfolio.objects.all().order_by('-id')[:5]
+        return context
+     
+# def about_view(request):
+#     return render(request, "about.html")
 
 def contact_view(request):
     return render(request, "contact.html")

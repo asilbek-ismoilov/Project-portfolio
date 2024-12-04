@@ -62,76 +62,6 @@
     </div>
     <!--:::::ABOUT AREA END :::::::-->
 
-    <!--:::::SERVICE AREA START :::::::-->
-    <!-- <div class="service-area service-primery padding-top" id="service">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="single-service pricing2">
-                        <div class="service-icon">
-                            <img src="{% static 'img/icon/service1.svg' %}" alt="">
-                        </div>
-                        <div class="service-text">
-                            <h4>design principales</h4>
-                            <p>Need a project completed by an expert? Let’s go! Access a Human Resources Consultant to
-                                answer questions</p>
-                        </div>
-                        <div class="circles-wrap">
-                            <div class="circles">
-                                <span class="circle circle-1"></span>
-                                <span class="circle circle-2"></span>
-                                <span class="circle circle-3"></span>
-                                <span class="circle circle-4"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="single-service active pricing2">
-                        <div class="service-icon">
-                            <img src="{% static 'img/icon/service2.svg' %}" alt="">
-                        </div>
-                        <div class="service-text">
-                            <h4>design principales</h4>
-                            <p>Need a project completed by an expert? Let’s go! Access a Human Resources Consultant to
-                                answer questions</p>
-                        </div>
-
-                        <div class="circles-wrap">
-                            <div class="circles">
-                                <span class="circle circle-1"></span>
-                                <span class="circle circle-2"></span>
-                                <span class="circle circle-3"></span>
-                                <span class="circle circle-4"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="single-service pricing2">
-                        <div class="service-icon">
-                            <img src="{% static 'img/icon/service1.svg' %}" alt="">
-                        </div>
-                        <div class="service-text">
-                            <h4>design principales</h4>
-                            <p>Need a project completed by an expert? Let’s go! Access a Human Resources Consultant to
-                                answer questions</p>
-                        </div>
-
-                        <div class="circles-wrap">
-                            <div class="circles">
-                                <span class="circle circle-1"></span>
-                                <span class="circle circle-2"></span>
-                                <span class="circle circle-3"></span>
-                                <span class="circle circle-4"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!--:::::SERVICE AREA END :::::::-->
 
     <!--:::::PROJECT AREA START :::::::-->
     <div class="project-area project-area2 project-area-primery section-padding" id="portfolio">
@@ -139,55 +69,36 @@
             <div class="row">
                 <div class="col-lg-6 align-self-center">
                     <div class="primery-heading">
-                        <strong class="filltext">our projects</strong>
-                        <small>WORKING PROCESS</small>
-                        <h2>lastet working <span>project</span></h2>
+                        <strong class="filltext">Men proektim</strong>
+                        <small>Ishlaydigan loyihalar</small>
+                        <h2>oxirgi ishlagan <span>proekt</span></h2>
                     </div>
                 </div>
                 <div class="col-lg-5 align-self-center">
                     <div class="primery-info-content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ratione reprehenderit </p>
+                        <p>Loyihalar turlicha, Backend va Frontend bilan qilingan. Ko'proq jamoa bilan ishlangan</p>
                     </div>
                 </div>
             </div>
             <div class="space-60"></div>
             <div class="row">
                 <ul id="da-thumbs" class="da-thumbs portfolio-carousel2 owl-carousel">
+                    {% for portfolio in portfolios %}
                     <li>
-                        <a href="#">
-                            <img src="{% static 'img/project/project1.png' %}" alt="">
-                            <div><span>Menu by Simon Jensen</span></div>
+                        <a href="{% url 'portfolio-page' %}">
+                            <img 
+                            style="
+                                width: 100%; 
+                                height: 100%; 
+                                object-fit: contain; 
+                                background-color: white;" 
+                            src="{{ portfolio.image.url }}" 
+                            alt="{{ portfolio.title }}">
+                        <div><span>{{ portfolio.title }}</span></div>
+                            <div><span>{{ portfolio.title }}</span></div>
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
-                            <img src="{% static 'img/project/project2.png' %}" alt="">
-                            <div><span>Menu by Simon Jensen</span></div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="{% static 'img/project/project3.png' %}" alt="">
-                            <div><span>Menu by Simon Jensen</span></div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="{% static 'img/project/project4.png' %}" alt="">
-                            <div>
-                                <span>Menu by Simon Jensen</span>
-
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="{% static 'img/project/project4.png' %}" alt="">
-                            <div>
-                                <span>Menu by Simon Jensen</span>
-                            </div>
-                        </a>
-                    </li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>

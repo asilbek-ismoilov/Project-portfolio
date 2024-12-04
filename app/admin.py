@@ -1,7 +1,8 @@
 from django.contrib import admin
-from .models import Blog, Category
+from .models import Blog, Category, Portfolio, PortfolioCategory, Contact
 from django.utils.html import format_html
-from .models import Portfolio, PortfolioCategory
+
+admin.site.register((PortfolioCategory, Category, Contact)) 
 
 @admin.register(Portfolio)
 class PortfolioAdmin(admin.ModelAdmin):
@@ -15,11 +16,6 @@ class PortfolioAdmin(admin.ModelAdmin):
             return format_html('<img src="{}" style="width: 100px; height: auto;" />', obj.image.url)
         return '-'
     image_tag.short_description = 'Image'
-
-
-@admin.register(Category)
-class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('name',)
 
 
 @admin.register(Blog)
