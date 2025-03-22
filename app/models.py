@@ -46,7 +46,9 @@ class Portfolio(models.Model):
     title = models.CharField(max_length=255)
     slug = models.SlugField(unique=True, blank=True)
     category = models.ForeignKey('PortfolioCategory', on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='Portfolio/images')
+    image_1 = models.ImageField(upload_to='Portfolio/images', verbose_name="Pic 1")
+    image_2 = models.ImageField(upload_to='Portfolio/images', verbose_name="Pic 2")
+    image_3 = models.ImageField(upload_to='Portfolio/images', verbose_name="Pic 3")
     date = models.DateField()
     url = models.URLField(blank=True, null=True)
 

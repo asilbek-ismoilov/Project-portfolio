@@ -47,7 +47,15 @@
                      <div href="{% url 'portfolio-detail' slug=portfolio.slug %}" class="col-md-4 {{ portfolio.category.name|slugify }}">
                          <div class="portfolio-wrap">
                              <div class="single-portfolio-item lage portfolio-bg-1">
-                                 <img src="{{ portfolio.image.url }}" alt="{{ portfolio.title }}" class="img-fluid">
+                                <img 
+                                style="
+                                    width: 100%; 
+                                    height: 100%; 
+                                    object-fit: contain; 
+                                    background-color: white;" 
+                                src="{{ portfolio.image_1.url }}" 
+                                alt="{{ portfolio.title }}">
+                                 <!-- <img src="{{ portfolio.image_1.url }}" alt="{{ portfolio.title }}"> -->
                                  <div class="portfolio-hover">
                                      <div class="portfolio-hover-table">
                                          <div class="portfolio-hover-table-cell">

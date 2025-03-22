@@ -6,16 +6,16 @@ admin.site.register((PortfolioCategory, Category, Contact))
 
 @admin.register(Portfolio)
 class PortfolioAdmin(admin.ModelAdmin):
-    list_display = ('title', 'category', 'date', 'image_tag')
+    list_display = ('title', 'category', 'date')
     list_filter = ('category', 'date')
     search_fields = ('title',)
     prepopulated_fields = {'slug': ('title',)}
 
-    def image_tag(self, obj):
-        if obj.image:
-            return format_html('<img src="{}" style="width: 100px; height: auto;" />', obj.image.url)
-        return '-'
-    image_tag.short_description = 'Image'
+    # def image_tag(self, obj):
+    #     if obj.image:
+    #         return format_html('<img src="{}" style="width: 100px; height: auto;" />', obj.image.url)
+    #     return '-'
+    # image_tag.short_description = 'Image'
 
 
 @admin.register(Blog)
